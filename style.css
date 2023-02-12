@@ -1,0 +1,44 @@
+body{
+
+  background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  position: relative;;
+}
+
+
+
+.outer {
+  display: flex;
+  position: relative;
+  margin: 45px;
+
+  top : 250px;
+}
+
+.about-calc{
+
+  width: 30%;
+  margin: 0 ;;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.about-me{
+  width: 20%;
+  margin: 0 0 0 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  position : relative;
+  left : 600px;
+}

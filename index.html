@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="root">
+      <div class="outer">
+        <div class="about-calc">
+          <p class="p1">
+            This is a Basic calculator that does operations like addition,
+            subtraction, multiplication, and division etc. This webpage was
+            created using Javascript, HTML, and CSS. <br />
+            Here's the source code :
+          </p>
+        </div>
+
+        <div class="calculator">
+          <div class="butt">
+            <form>
+              <div class="display">
+                <input type="text" id="displayid" />
+              </div>
+
+              <div class="row1">
+                <input type="button" value="Clr" onclick="all_clear()" />
+                <input type="button" value="⌫" onclick="Del()" />
+                <input type="button" value="(" class="b_brac1" />
+                <input type="button" value=")" class="b_brac2" />
+                <input type="button" value="/" class="b_div" />
+              </div>
+
+              <div class="row2">
+                <input type="button" value="7" class="b_7" />
+                <input type="button" value="8" class="b_8" />
+                <input type="button" value="9" class="b_9" />
+                <input type="button" value="*" class="b_multi" />
+              </div>
+
+              <div class="row3">
+                <input type="button" value="4" class="b_4" />
+                <input type="button" value="5" class="b_5" />
+                <input type="button" value="6" class="b_6" />
+                <input type="button" value="-" class="b_sub" />
+              </div>
+
+              <div class="row4">
+                <input type="button" value="1" class="b_1" />
+                <input type="button" value="2" class="b_2" />
+                <input type="button" value="3" class="b_3" />
+                <input type="button" value="+" class="b_add" />
+              </div>
+
+              <div class="row5">
+                <input type="button" value="^" class="b_pow" />
+                <input type="button" value="0" class="b_0" />
+                <input type="button" value="." class="b_dot" />
+
+                <input
+                  type="button"
+                  value="="
+                  class="b_ans"
+                  onclick="Postfix_Evaluation()"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="about-me">
+          <p class="p3">
+            Ayush Kathayat here. <br />
+            of my projects are listed below:
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
