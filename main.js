@@ -1,10 +1,9 @@
-import './style.css'
-"use strict";
-const root = document.getElementById("root");
+("use strict");
 
+import "./style.css";
+import { is_focused, backspace, solvePostfix } from "./src/utils";
 
-
-import { display } from "./src/components/display";
+import { display } from "./src/components";
 
 import {
   b_dot,
@@ -23,35 +22,8 @@ import {
   b_8,
   b_7,
   b_div,
-  b_brac2,
-  b_brac1,
+  b_bracs,
 } from "./src/components/buttons";
 
-
-import { is_focused } from './src/utils/isFocus';
-
-window.addEventListener("keydown", (event) => {
-
-
-  if (is_focused(display)) {
-    return;
-  }
-
-  if (event.code[0] === "D") {
-    // if isNumeric
-    display.value = display.value + event.key;
-    return;
-  }
-  if (event.code === "Backspace") {
-    Del();
-    return;
-  }
-  if (event.code === "Enter") {
-    Postfix_Evaluation();
-    return;
-  }
-});
-
-
-
+import { focus_on_keydown } from "./src/features";
 

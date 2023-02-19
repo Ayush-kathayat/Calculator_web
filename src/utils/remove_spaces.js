@@ -1,4 +1,8 @@
-export function remove_spaces(str_1) {
+"use strict";
+
+
+
+export default function remove_spaces(str_1) {
     let str_2 = "";
     for (let i = 0; i < str_1.length; i++) {
       if (str_1[i] === " ") {

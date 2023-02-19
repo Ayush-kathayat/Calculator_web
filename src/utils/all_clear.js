@@ -1,4 +1,4 @@
-
-export function all_clear() {
+"use strict";
+export default function all_clear() {
     document.getElementById("displayid").value = "";
   }

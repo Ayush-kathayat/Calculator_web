@@ -1,5 +1,5 @@
-export function is_focused(element) {
+"use strict";
 
-    return document.activeElement === element; // true if input is focused and false otherwise
-  
-  }
+export default function is_focused(element) {
+  return document.activeElement === element; // true if input is focused and false otherwise
+}

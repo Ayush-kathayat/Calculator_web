@@ -1,0 +1,3 @@
+const MAX_INPUT_LENGTH = 15;
+
+export { MAX_INPUT_LENGTH };

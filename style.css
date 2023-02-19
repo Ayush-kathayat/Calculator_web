@@ -1,44 +1,312 @@
-body{
+:root {
+  --color1: #b4e5af;
+  --color2: #06ff00;
+  --color3: #b4e5af;
+  --color4: #06ff00;
 
-  background-color: #f5f5f5;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  --displayFontColor: #21fc1d;
+  --displayFontColor-light: black;
+
+  --calcFont: "CalcFont";
+}
+
+@font-face {
+  font-family: "CalcFont";
+  src: url("./CalcFont.ttf");
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: var(--color3);
+  background-color: black;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+header > h1 {
+  font-family: "CalcFont";
+  font-size: 3rem;
+  color: var(--color1);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 20px;
+}
+
+body {
+  background-color: #07252d;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.4233333333cm; /* 16px */
   color: #333;
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  position: relative;;
+  position: relative;
+  font-family: var(--calcFont);
+  /* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'Poppins', sans-serif; */
 }
-
-
 
 .outer {
   display: flex;
-  position: relative;
-  margin: 45px;
-
-  top : 250px;
+  /* flex-direction: column; */
+  gap: 5px;
 }
 
-.about-calc{
-
+.about-calc {
   width: 30%;
-  margin: 0 ;;
+  margin: 0;
+  height: 0%;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator {
+  flex-direction: column;
+  /* width: 26%; */
+  /* padding: 20%; */
+  background-color: #07252d;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center; 
+
+
+}
+
+.about_me {
+  width: 30%;
+  height: 0%;
   padding: 20px;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.about-me{
-  width: 20%;
-  margin: 0 0 0 20px;
-  padding: 20px;
-  background-color: #fff;
+.butts {
+  background-color: #07252d;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
-  position : relative;
-  left : 600px;
+  border-style: solid;
+  border-color: white;
+  border-width: 6px;
+  box-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, inset 0 0 15px #00b3ff,
+    inset 0 0 20px #00b3ff, 0 0 25px #00b3ff;
+  margin: 40px;
+  padding: 40px;
+  
 }
+
+.dispWrapper {
+  border-style: solid;
+  border-color: white;
+  height: 200px;
+  width: 460px;
+  border-width: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, inset 0 0 15px #00b3ff,
+    inset 0 0 20px #00b3ff, 0 0 25px #00b3ff;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+}
+
+.display {
+  border-style: solid;
+  border-color: white;
+  /* border-bottom-width: 5px;
+  border-top-width: 5px;
+  border-left-width: 8px;
+  border-right-width: 8px; */
+  /* position: absolute;
+  top: -45px; */
+  box-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, inset 0 0 15px #00b3ff,
+    inset 0 0 20px #00b3ff, 0 0 25px #00b3ff;
+  border-radius: 5px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+
+}
+
+
+
+.disp {
+  /* width: 100%;
+  height: 50px; */
+  font-size: 50px;
+  color: white;
+  background-color: black;
+  text-align: right;
+  /* position: relative;
+  left: 590px;
+  top: 0px; */
+  margin: inherit;
+  font-family: var(--calcFont);
+  color: var(--displayFontColor);
+  --glow-intensity: -85px;
+  text-shadow: 0 0 calc(var(--glow-intensity) + 10px)
+      var(--displayFontColor-light),
+    0 0 calc(var(--glow-intensity) + 10px) var(--displayFontColor-light),
+    0 0 calc(var(--glow-intensity) + 30px) var(--displayFontColor-light),
+    0 0 calc(var(--glow-intensity) + 40px) var(--displayFontColor),
+    0 0 calc(var(--glow-intensity) + 70px) var(--displayFontColor),
+    0 0 calc(var(--glow-intensity) + 80px) var(--displayFontColor),
+    0 0 calc(var(--glow-intensity) + 100px) var(--displayFontColor),
+    0 0 calc(var(--glow-intensity) + 150px) var(--displayFontColor);
+    width: 100%;
+}
+
+
+
+.butt {
+  /* display: none; */
+  font-family: inherit;
+  font-size: 2rem !important;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  width: 65px;
+  height: 65px;
+  border-width: 3.5px;
+  border-color: white;
+  box-shadow: inset 0px 0px 5px #00b3ff, inset 0 0 5px #00b3ff,
+    inset 0 0 5px #00b3ff, inset 0 0 5px #00b3ff, inset 0 0 10px #00b3ff;
+
+  margin: 0.9rem;
+}
+
+.butt:hover {
+  background-color: #00b3ff;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #00b3ff, 0 0 5px #00b3ff, 0 0 0px #00b3ff,
+    0 0 15px #00b3ff, 0 0 20px #00b3ff;
+}
+
+.hover-class {
+  background-color: #00b3ff;
+  color: #fff;
+  box-shadow: 0px 0px 10px #00b3ff, 0 0 5px #00b3ff, 0 0 0px #00b3ff,
+    0 0 15px #00b3ff, 0 0 20px #00b3ff;
+}
+
+.backspace {
+  position: relative;
+  top: 2px;
+
+  box-shadow: inset 0px 0px 10px #f90716, inset 0 0 5px #f90716,
+    inset 0 0 0px #f90716, inset 0 0 15px #f90716, inset 0 0 20px #f90716;
+}
+.backspace:hover {
+  background-color: #f90716;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #f90716, 0 0 5px #f90716, 0 0 0px #f90716,
+    0 0 15px #f90716, 0 0 20px #f90716;
+}
+
+.backspace_hover {
+  background-color: #f90716;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #f90716, 0 0 5px #f90716, 0 0 0px #f90716,
+    0 0 15px #f90716, 0 0 20px #f90716;
+}
+
+.allClear {
+  /* position: relative;
+  top: -1px; */
+
+  box-shadow: inset 0px 0px 10px #f90716, inset 0 0 5px #f90716,
+    inset 0 0 0px #f90716, inset 0 0 15px #f90716, inset 0 0 20px #f90716;
+}
+
+.allClear:hover {
+  background-color: #f90716;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #f90716, 0 0 5px #f90716, 0 0 0px #f90716,
+    0 0 15px #f90716, 0 0 20px #f90716;
+}
+
+.b_add {
+  /* position: relative;
+  top: 2px;
+  left: 0px; */
+  box-shadow: inset 0px 0px 10px #06ff00, inset 0 0 5px #06ff00,
+    inset 0 0 0px #06ff00, inset 0 0 15px #06ff00, inset 0 0 20px #06ff00;
+}
+
+.b_add:hover {
+  background-color: #06ff00;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #06ff00, 0 0 5px #06ff00, 0 0 0px #06ff00,
+    0 0 15px #06ff00, 0 0 20px #06ff00;
+}
+
+.b_ans {
+  box-shadow: inset 0px 0px 10px #fbff00, inset 0 0 5px #fbff00,
+    inset 0 0 0px #fbff00, inset 0 0 15px #fbff00, inset 0 0 20px #fbff00;
+}
+
+.b_ans:hover {
+  color: black;
+  background-color: #fbff00;
+  box-shadow: 0px 0px 10px #fbff00, 0 0 5px #fbff00, 0 0 0px #fbff00,
+    0 0 15px #fbff00, 0 0 20px #fbff00;
+  cursor: pointer;
+}
+
+.b_pow {
+  position: relative;
+  box-shadow: inset 0px 0px 10px #ff005b, inset 0 0 5px #ff005b,
+    inset 0 0 0px #ff005b, inset 0 0 15px #ff005b, inset 0 0 20px #ff005b;
+}
+
+.b_pow:hover {
+  color: black;
+  background-color: #ff005b;
+  box-shadow: 0px 0px 10px #ff005b, 0 0 5px #ff005b, 0 0 0px #ff005b,
+    0 0 15px #ff005b, 0 0 20px #ff005b;
+  cursor: pointer;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.1rem;
+
+
+  
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

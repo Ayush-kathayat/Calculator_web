@@ -1,19 +1,35 @@
-
 "use strict";
 
-import { display } from "./display";
+import display from "./display";
 
-const b_brac1 = document.querySelector(".b_brac1");
+import {
+  backspace,
+  all_clear,
+} from "../utils";
 
-b_brac1.addEventListener("click", (event) => {
-  display.value = display.value + b_brac1.value;
+import calculate from "../utils/calculate";
+
+const b_bracs = document.querySelector(".b_bracs");
+
+let flag = true;
+
+b_bracs.addEventListener("click", (event) => {
+
+  if (flag) {
+    display.value = display.value + "(";
+    flag = false;
+  } else {
+    display.value = display.value + ")";
+    flag = true;
+  }
+
 });
 
-const b_brac2 = document.querySelector(".b_brac2");
+// const b_bracs = document.querySelector(".b_bracs");
 
-b_brac2.addEventListener("click", (event) => {
-  display.value = display.value + b_brac2.value;
-});
+// b_bracs.addEventListener("click", (event) => {
+//   display.value = display.value + b_bracs.value;
+// });
 
 const b_div = document.querySelector(".b_div");
 
@@ -111,32 +127,43 @@ b_dot.addEventListener("click", (event) => {
   display.value = display.value + b_dot.value;
 });
 
+const b_all_clear = document.querySelector(".allClear");
+
+b_all_clear.addEventListener("click", (event) => {
+  all_clear();
+});
+
+const b_del = document.querySelector(".backspace");
+
+b_del.addEventListener("click", (event) => {
+  backspace();
+});
+
 const b_ans = document.querySelector(".b_ans");
 
 b_ans.addEventListener("click", (event) => {
-
-  postfix_evaluation();
-  
+  calculate();
 });
 
-
 export {
-    b_dot,
-    b_pow,
-    b_add,
-    b_sub,
-    b_multi,
-    b_0,
-    b_3,
-    b_2,
-    b_1,
-    b_6,
-    b_5,
-    b_4,
-    b_9,
-    b_8,
-    b_7,
-    b_div,
-    b_brac2,
-    b_brac1
+  b_dot,
+  b_pow,
+  b_add,
+  b_sub,
+  b_multi,
+  b_0,
+  b_3,
+  b_2,
+  b_1,
+  b_6,
+  b_5,
+  b_4,
+  b_9,
+  b_8,
+  b_7,
+  b_div,
+  b_bracs,
+  b_all_clear,
+  b_del,
+  b_ans,
 };
