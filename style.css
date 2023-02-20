@@ -166,7 +166,7 @@ body {
   left: 590px;
   top: 0px; */
   margin: inherit;
-  font-family: var(--calcFont);
+  font-family: 'ZCOOL KuaiLe', sans-serif;
   color: var(--displayFontColor);
   --glow-intensity: -85px;
   text-shadow: 0 0 calc(var(--glow-intensity) + 10px)
