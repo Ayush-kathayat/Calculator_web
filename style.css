@@ -8,6 +8,7 @@
   --displayFontColor-light: black;
 
   --calcFont: "CalcFont";
+
 }
 
 @font-face {
@@ -27,6 +28,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1;
+  font-size: larger;
 }
 
 header > h1 {
@@ -44,15 +46,16 @@ body {
   background-color: #07252d;
   height: 100vh;
   font-family: "Roboto", sans-serif;
-  font-size: 0.4233333333cm; /* 16px */
+  font-size: 1rem; 
   color: #333;
   line-height: 1.5;
   margin: 0;
   padding: 0;
   position: relative;
-  font-family: var(--calcFont);
+  /* font-family: var(--calcFont); */
   /* font-family: 'Montserrat', sans-serif; */
   /* font-family: 'Poppins', sans-serif; */
+  font-family: 'ZCOOL KuaiLe', sans-serif;
 }
 
 .outer {
