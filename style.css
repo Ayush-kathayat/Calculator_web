@@ -200,20 +200,59 @@ body {
   margin: 0.9rem;
 }
 
-.butt:hover {
-  background-color: #00b3ff;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0px 0px 10px #00b3ff, 0 0 5px #00b3ff, 0 0 0px #00b3ff,
-    0 0 15px #00b3ff, 0 0 20px #00b3ff;
+
+@media screen and (min-width: 769px) {
+  /* Styles for desktops */
+  .butt:hover {
+    background-color: #00b3ff;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #00b3ff, 0 0 5px #00b3ff, 0 0 0px #00b3ff,
+      0 0 15px #00b3ff, 0 0 20px #00b3ff;
+  }
+  
+  .hover-class {
+    background-color: #00b3ff;
+    color: #fff;
+    box-shadow: 0px 0px 10px #00b3ff, 0 0 5px #00b3ff, 0 0 0px #00b3ff,
+      0 0 15px #00b3ff, 0 0 20px #00b3ff;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 
-.hover-class {
-  background-color: #00b3ff;
-  color: #fff;
-  box-shadow: 0px 0px 10px #00b3ff, 0 0 5px #00b3ff, 0 0 0px #00b3ff,
-    0 0 15px #00b3ff, 0 0 20px #00b3ff;
+
+/* Media queries for different devices */
+@media screen and (max-width: 480px) {
+  /* Styles for smartphones */
+
+  .about-calc
+  {
+    display: none;
+  }
+  .about_me
+  {
+    display: none;
+  }
+
+  header
+  {
+    display: none;
+  }
+
+  footer
+  {
+    display: none;
+  }
+
+  
 }
+
 
 .backspace {
   position: relative;
@@ -307,9 +346,5 @@ body {
   
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
